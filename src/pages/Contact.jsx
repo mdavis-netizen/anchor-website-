@@ -85,8 +85,8 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Address',
-      details: '123 Financial District',
-      subdetails: 'New York, NY 10004',
+      details: '88 Pine Street',
+      subdetails: 'Manhattan, New York 10005',
     },
     {
       icon: <Clock className="w-6 h-6" />,

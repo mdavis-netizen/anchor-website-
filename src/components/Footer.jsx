@@ -126,8 +126,8 @@ const Footer = () => {
               <li className="flex items-start space-x-3 text-sm group">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0 text-anchor-teal group-hover:scale-110 transition-transform duration-200" />
                 <span className="text-gray-400">
-                  123 Financial District<br />
-                  New York, NY 10004
+                  88 Pine Street<br />
+                  Manhattan, New York 10005
                 </span>
               </li>
             </ul>

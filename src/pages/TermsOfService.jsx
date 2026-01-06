@@ -221,8 +221,8 @@ const TermsOfService = () => {
                 </p>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <p className="text-gray-900 font-semibold mb-2">Anchor Funding</p>
-                  <p className="text-gray-700">123 Financial District</p>
-                  <p className="text-gray-700">New York, NY 10004</p>
+                  <p className="text-gray-700">88 Pine Street</p>
+                  <p className="text-gray-700">Manhattan, New York 10005</p>
                   <p className="text-gray-700 mt-2">Email: <a href="mailto:david@anchorfundingusa.com" className="text-anchor-blue hover:text-anchor-navy">david@anchorfundingusa.com</a></p>
                   <p className="text-gray-700">Phone: <a href="tel:+16469936971" className="text-anchor-blue hover:text-anchor-navy">(646) 993-6971</a></p>
                 </div>

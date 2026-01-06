@@ -136,54 +136,108 @@ const Home = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white overflow-hidden">
-        {/* Background Image */}
+      {/* Hero Section - Sophisticated Design */}
+      <section className="relative bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-white overflow-hidden min-h-screen flex items-center">
+        {/* Background Image - Manhattan Skyline */}
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2000&auto=format&fit=crop" 
-            alt="Professional business meeting" 
-            className="w-full h-full object-cover opacity-20"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2400&auto=format&fit=crop" 
+            alt="Manhattan Financial District skyline" 
+            className="w-full h-full object-cover opacity-15"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/90 to-teal-700/90"></div>
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(13, 148, 136, 0.2) 0%, transparent 50%)'
+        {/* Elegant Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/95 via-blue-950/95 to-gray-900/95"></div>
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
+          backgroundSize: '50px 50px'
         }}></div>
         
-        <div className="section-container relative z-10">
-          <div className="py-20 md:py-32">
+        <div className="section-container relative z-10 py-20">
+          <motion.div 
+            className="max-w-5xl mx-auto"
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+          >
+            {/* Elegant Badge */}
             <motion.div 
-              className="max-w-4xl mx-auto text-center"
-              initial="initial"
-              animate="animate"
-              variants={staggerContainer}
+              className="flex justify-center mb-8"
+              variants={fadeInUp}
             >
-              <motion.h1 
-                className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-                variants={fadeInUp}
-              >
-                Fuel Your Business Growth with
-                <span className="text-teal-300"> Anchor Funding</span>
-              </motion.h1>
-              <motion.p 
-                className="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto"
-                variants={fadeInUp}
-              >
-                Access up to $5M in business funding with fast approval, competitive rates, and flexible terms. Get the capital you need to succeed.
-              </motion.p>
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center"
-                variants={fadeInUp}
-              >
-                <Link to="/apply" className="btn-primary text-center text-lg px-8 py-4">
-                  Get Funded Today <ArrowRight className="inline ml-2" size={24} />
-                </Link>
-                <Link to="/services" className="btn-secondary bg-white/10 border-2 border-white text-white hover:bg-white hover:text-anchor-blue text-center text-lg px-8 py-4">
-                  View Products
-                </Link>
-              </motion.div>
+              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
+                <span className="w-2 h-2 bg-teal-400 rounded-full mr-2 animate-pulse"></span>
+                <span className="text-sm font-semibold tracking-wide text-gray-200">TRUSTED BY 10,000+ BUSINESSES</span>
+              </div>
             </motion.div>
+
+            <motion.h1 
+              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight text-center"
+              variants={fadeInUp}
+              style={{letterSpacing: '-0.03em'}}
+            >
+              <span className="block text-white">Capital That Moves</span>
+              <span className="block bg-gradient-to-r from-blue-400 via-teal-300 to-blue-400 bg-clip-text text-transparent">
+                Your Business Forward
+              </span>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto text-center font-light leading-relaxed"
+              variants={fadeInUp}
+            >
+              From $10K to $5M in flexible business funding. Fast decisions, competitive rates, and personalized service for ambitious companies.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              variants={fadeInUp}
+            >
+              <Link to="/apply" className="group relative px-10 py-4 bg-gradient-to-r from-blue-600 to-teal-500 text-white font-bold rounded-full text-lg hover:shadow-2xl hover:shadow-teal-500/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+                <span className="relative z-10 flex items-center">
+                  Get Funded Now 
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-teal-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
+              <Link to="/contact" className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white font-semibold rounded-full text-lg hover:bg-white/20 hover:border-white/50 transition-all duration-300">
+                Speak with an Expert
+              </Link>
+            </motion.div>
+
+            {/* Trust Indicators */}
+            <motion.div 
+              className="mt-16 flex flex-wrap justify-center items-center gap-12 text-center"
+              variants={fadeInUp}
+            >
+              <div>
+                <div className="text-4xl font-bold text-white mb-1">$500M+</div>
+                <div className="text-sm text-gray-400 uppercase tracking-wide">Funded</div>
+              </div>
+              <div className="h-12 w-px bg-white/20"></div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-1">24hrs</div>
+                <div className="text-sm text-gray-400 uppercase tracking-wide">Approval</div>
+              </div>
+              <div className="h-12 w-px bg-white/20"></div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-1">4.9★</div>
+                <div className="text-sm text-gray-400 uppercase tracking-wide">Rating</div>
+              </div>
+              <div className="h-12 w-px bg-white/20"></div>
+              <div>
+                <div className="text-4xl font-bold text-white mb-1">10K+</div>
+                <div className="text-sm text-gray-400 uppercase tracking-wide">Clients</div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+            <div className="w-1.5 h-3 bg-white/50 rounded-full"></div>
           </div>
         </div>
       </section>
