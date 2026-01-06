@@ -1,0 +1,429 @@
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { TrendingUp, Shield, Clock, Award, ArrowRight, CheckCircle2, Star, Quote, Landmark, Zap, DollarSign, CreditCard, Layers, Calendar } from 'lucide-react'
+
+const Home = () => {
+  // Animation variants
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  }
+
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const scaleIn = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
+    transition: { duration: 0.5 }
+  }
+  const features = [
+    {
+      icon: <Clock className="w-8 h-8 text-anchor-teal" />,
+      title: 'Fast Approval',
+      description: 'Get approved in as little as 24 hours with our streamlined application process.',
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-anchor-teal" />,
+      title: 'Competitive Rates',
+      description: 'Access the most competitive rates in the market with transparent terms you can trust.',
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-anchor-teal" />,
+      title: 'Flexible Terms',
+      description: 'Customized funding solutions that adapt to your business needs and cash flow.',
+    },
+    {
+      icon: <Award className="w-8 h-8 text-anchor-teal" />,
+      title: 'Expert Support',
+      description: 'Dedicated funding specialists to guide you through every step of the process.',
+    },
+  ]
+
+  const stats = [
+    { value: '$500M+', label: 'Total Funded' },
+    { value: '10,000+', label: 'Businesses Helped' },
+    { value: '4.9/5', label: 'Client Rating' },
+    { value: '24hr', label: 'Fast Approval' },
+  ]
+
+  const services = [
+    {
+      icon: <Landmark className="w-10 h-10 text-white" />,
+      title: 'SBA Loans',
+      description: 'Government-backed financing up to $5M with the lowest rates and longest terms.',
+      color: 'from-blue-500 to-blue-600',
+      link: '/products/sba-loans',
+    },
+    {
+      icon: <Zap className="w-10 h-10 text-white" />,
+      title: 'Merchant Cash Advance',
+      description: 'Fast funding up to $500K with flexible repayment based on your daily sales.',
+      color: 'from-purple-500 to-purple-600',
+      link: '/products/mca',
+    },
+    {
+      icon: <DollarSign className="w-10 h-10 text-white" />,
+      title: 'Business Loans',
+      description: 'Traditional term loans from $10K to $500K with predictable monthly payments.',
+      color: 'from-teal-500 to-teal-600',
+      link: '/products/business-loans',
+    },
+    {
+      icon: <CreditCard className="w-10 h-10 text-white" />,
+      title: 'Line of Credit',
+      description: 'Revolving credit up to $250K - draw funds as needed and pay for what you use.',
+      color: 'from-indigo-500 to-indigo-600',
+      link: '/products/line-of-credit',
+    },
+    {
+      icon: <Layers className="w-10 h-10 text-white" />,
+      title: 'Loan Consolidation',
+      description: 'Simplify multiple debts into one payment with lower rates and better terms.',
+      color: 'from-emerald-500 to-emerald-600',
+      link: '/products/loan-consolidation',
+    },
+    {
+      icon: <Calendar className="w-10 h-10 text-white" />,
+      title: 'Term Loans',
+      description: 'Fixed-rate financing from $25K to $500K with flexible terms from 6-60 months.',
+      color: 'from-cyan-500 to-cyan-600',
+      link: '/products/term-loans',
+    },
+  ]
+
+  const benefits = [
+    'No collateral required',
+    'Bad credit accepted',
+    'Multiple funding options',
+    'Same-day funding available',
+    'No hidden fees',
+    'Flexible repayment terms',
+  ]
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'Johnson\'s Retail Store',
+      location: 'Austin, TX',
+      rating: 5,
+      text: 'Anchor Funding helped us expand to a second location. The process was fast, transparent, and the team was incredibly supportive. We got approved in less than 24 hours!',
+      amount: '$150K',
+    },
+    {
+      name: 'Michael Chen',
+      company: 'Tech Solutions Inc',
+      location: 'San Francisco, CA',
+      rating: 5,
+      text: 'As a growing tech company, we needed capital quickly. Anchor Funding delivered exactly what we needed with flexible terms that worked for our cash flow.',
+      amount: '$250K',
+    },
+    {
+      name: 'David Rodriguez',
+      company: 'Rodriguez Construction',
+      location: 'Miami, FL',
+      rating: 5,
+      text: 'The equipment financing option was perfect for our business. We purchased new machinery and saw immediate ROI. Highly recommend Anchor Funding!',
+      amount: '$300K',
+    },
+  ]
+
+  return (
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-10"></div>
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(13, 148, 136, 0.3) 0%, transparent 50%)'
+        }}></div>
+        
+        <div className="section-container relative z-10">
+          <div className="py-20 md:py-32">
+            <motion.div 
+              className="max-w-4xl mx-auto text-center"
+              initial="initial"
+              animate="animate"
+              variants={staggerContainer}
+            >
+              <motion.h1 
+                className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+                variants={fadeInUp}
+              >
+                Fuel Your Business Growth with
+                <span className="text-teal-300"> Anchor Funding</span>
+              </motion.h1>
+              <motion.p 
+                className="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto"
+                variants={fadeInUp}
+              >
+                Access up to $5M in business funding with fast approval, competitive rates, and flexible terms. Get the capital you need to succeed.
+              </motion.p>
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+                variants={fadeInUp}
+              >
+                <Link to="/apply" className="btn-primary text-center text-lg px-8 py-4">
+                  Get Funded Today <ArrowRight className="inline ml-2" size={24} />
+                </Link>
+                <Link to="/services" className="btn-secondary bg-white/10 border-2 border-white text-white hover:bg-white hover:text-anchor-blue text-center text-lg px-8 py-4">
+                  View Products
+                </Link>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof / Stats Section */}
+      <section className="bg-white py-16 border-b shadow-sm">
+        <div className="section-container">
+          <motion.div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {stats.map((stat, index) => (
+              <motion.div 
+                key={index} 
+                className="text-center"
+                variants={scaleIn}
+              >
+                <div className="text-4xl md:text-5xl font-bold text-anchor-blue mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-600 text-sm md:text-base font-medium">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="section-container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Our Funding Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose from six flexible financing options designed to meet your business needs
+            </p>
+          </div>
+
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+              >
+                <Link
+                  to={service.link}
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group block"
+                >
+                <div className={`bg-gradient-to-r ${service.color} p-8 group-hover:scale-105 transition-transform duration-300`}>
+                  <div className="flex justify-center mb-4">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white text-center mb-3">
+                    {service.title}
+                  </h3>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-700 text-center mb-4">{service.description}</p>
+                  <div className="text-center">
+                    <span className="text-anchor-blue font-semibold group-hover:text-anchor-navy inline-flex items-center">
+                      Learn More <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                    </span>
+                  </div>
+                </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <div className="text-center mt-12">
+            <Link to="/services" className="btn-secondary text-lg px-8 py-4">
+              Compare All Products
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits / Features Section */}
+      <section className="py-20 bg-white">
+        <div className="section-container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Why Choose Anchor Funding?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We provide fast, flexible business funding solutions designed to help your company thrive
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 p-8 rounded-xl hover:shadow-xl transition-shadow duration-300 text-center"
+              >
+                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional Benefits Grid */}
+          <div className="mt-16 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-8 md:p-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+                Everything You Need to Succeed
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-800 font-medium">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 bg-gray-50">
+        <div className="section-container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Get Funded in 3 Simple Steps
+              </h2>
+              <p className="text-xl text-gray-600">
+                Our streamlined process gets you the funding you need, fast
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+                <div className="bg-anchor-blue text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-6">
+                  1
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Apply Online</h3>
+                <p className="text-gray-600">Complete our simple application in just 5 minutes with basic business information</p>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+                <div className="bg-anchor-teal text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-6">
+                  2
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Get Approved</h3>
+                <p className="text-gray-600">Receive approval within 24 hours from our expert funding specialists</p>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+                <div className="bg-anchor-navy text-white rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-6">
+                  3
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Receive Funds</h3>
+                <p className="text-gray-600">Get your funding deposited directly into your business account</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="section-container">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Join thousands of satisfied businesses who have achieved their goals with Anchor Funding
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex space-x-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <Quote className="w-8 h-8 text-anchor-teal opacity-30" />
+                </div>
+                <p className="text-gray-700 mb-6 leading-relaxed italic">"{testimonial.text}"</p>
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="font-bold text-gray-900 text-lg">{testimonial.name}</p>
+                  <p className="text-sm text-gray-600 font-medium">{testimonial.company}</p>
+                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                  <div className="mt-3">
+                    <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full">
+                      Funded {testimonial.amount}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/about" className="text-anchor-blue font-semibold hover:text-anchor-navy inline-flex items-center text-lg">
+              Read More Success Stories <ArrowRight className="ml-2" size={20} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="bg-gradient-to-r from-anchor-blue via-anchor-navy to-anchor-teal text-white py-20">
+        <div className="section-container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Ready to Grow Your Business?
+          </h2>
+          <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto">
+            Get started today and see how Anchor Funding can help your business succeed. Apply now and receive a decision within 24 hours.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/apply" className="btn-primary bg-white text-anchor-blue hover:bg-gray-100 text-lg px-10 py-4 shadow-xl">
+              Get Funded Today
+            </Link>
+            <Link to="/contact" className="btn-secondary bg-white/10 border-2 border-white text-white hover:bg-white hover:text-anchor-blue text-lg px-10 py-4">
+              Speak to an Expert
+            </Link>
+          </div>
+          <p className="mt-8 text-blue-200 text-sm">
+            No obligation • Fast approval • Competitive rates
+          </p>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default Home
