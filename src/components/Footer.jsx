@@ -5,128 +5,193 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="section-container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gradient-to-br from-gray-900 via-anchor-navy to-gray-900 text-gray-300">
+      <div className="section-container py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-anchor-blue to-anchor-teal rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">A</span>
-              </div>
-              <span className="text-xl font-bold text-white">
-                Anchor Funding
-              </span>
-            </div>
-            <p className="text-sm text-gray-400 mb-4">
-              Empowering businesses with flexible funding solutions to fuel growth and success.
+            <Link to="/" className="inline-block mb-4 group">
+              <img 
+                src="/logo-white.svg" 
+                alt="Anchor Funding" 
+                className="h-12 w-auto transition-all duration-300 group-hover:scale-105 brightness-0 invert"
+              />
+            </Link>
+            <p className="text-sm text-gray-400 mb-6 leading-relaxed">
+              Empowering businesses with flexible funding solutions to fuel growth and success since 2010.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-anchor-teal transition-colors">
-                <Linkedin size={20} />
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-anchor-blue hover:to-anchor-teal flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <Linkedin size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-anchor-teal transition-colors">
-                <Twitter size={20} />
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-anchor-blue hover:to-anchor-teal flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <Twitter size={18} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-anchor-teal transition-colors">
-                <Facebook size={20} />
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-anchor-blue hover:to-anchor-teal flex items-center justify-center transition-all duration-300 hover:scale-110">
+                <Facebook size={18} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-bold mb-6 text-lg">Quick Links</h3>
+            <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-sm hover:text-anchor-teal transition-colors">
+                <Link to="/" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-sm hover:text-anchor-teal transition-colors">
+                <Link to="/about" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-sm hover:text-anchor-teal transition-colors">
+                <Link to="/services" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-sm hover:text-anchor-teal transition-colors">
+                <Link to="/apply" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
+                  Apply Now
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Products */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              <li className="text-sm">Business Loans</li>
-              <li className="text-sm">Equipment Financing</li>
-              <li className="text-sm">Invoice Factoring</li>
-              <li className="text-sm">Line of Credit</li>
+            <h3 className="text-white font-bold mb-6 text-lg">Our Products</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/products/sba-loans" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
+                  SBA Loans
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/mca" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
+                  Merchant Cash Advance
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/business-loans" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
+                  Business Loans
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/line-of-credit" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
+                  Line of Credit
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/term-loans" className="text-gray-400 hover:text-anchor-teal transition-colors duration-200 flex items-center group">
+                  <span className="w-0 group-hover:w-2 h-0.5 bg-anchor-teal transition-all duration-200 mr-0 group-hover:mr-2"></span>
+                  Term Loans
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3 text-sm">
-                <Phone size={18} className="mt-0.5 flex-shrink-0" />
-                <span>(646) 993-6971</span>
+            <h3 className="text-white font-bold mb-6 text-lg">Get In Touch</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start space-x-3 text-sm group">
+                <Phone size={18} className="mt-0.5 flex-shrink-0 text-anchor-teal group-hover:scale-110 transition-transform duration-200" />
+                <a href="tel:+16469936971" className="hover:text-anchor-teal transition-colors duration-200">
+                  (646) 993-6971
+                </a>
               </li>
-              <li className="flex items-start space-x-3 text-sm">
-                <Mail size={18} className="mt-0.5 flex-shrink-0" />
-                <span>david@anchorfundingusa.com</span>
+              <li className="flex items-start space-x-3 text-sm group">
+                <Mail size={18} className="mt-0.5 flex-shrink-0 text-anchor-teal group-hover:scale-110 transition-transform duration-200" />
+                <a href="mailto:david@anchorfundingusa.com" className="hover:text-anchor-teal transition-colors duration-200">
+                  david@anchorfundingusa.com
+                </a>
               </li>
-              <li className="flex items-start space-x-3 text-sm">
-                <MapPin size={18} className="mt-0.5 flex-shrink-0" />
-                <span>123 Financial District, New York, NY 10004</span>
+              <li className="flex items-start space-x-3 text-sm group">
+                <MapPin size={18} className="mt-0.5 flex-shrink-0 text-anchor-teal group-hover:scale-110 transition-transform duration-200" />
+                <span className="text-gray-400">
+                  123 Financial District<br />
+                  New York, NY 10004
+                </span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <p className="mb-4 md:mb-0">&copy; {currentYear} Anchor Funding. All rights reserved.</p>
+        {/* Divider */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+            <p className="text-sm mb-4 md:mb-0 text-gray-400">
+              &copy; {currentYear} Anchor Funding USA. All rights reserved.
+            </p>
             <div className="flex space-x-6">
-              <Link to="/privacy" className="hover:text-anchor-teal transition-colors">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-anchor-teal transition-colors duration-200">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="hover:text-anchor-teal transition-colors">
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-anchor-teal transition-colors duration-200">
                 Terms of Service
               </Link>
             </div>
           </div>
           
-          {/* Trust Badges */}
-          <div className="mt-8 pt-8 border-t border-gray-800">
+          {/* Trust Badges - Enhanced */}
+          <div className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700">
             <div className="flex flex-wrap justify-center items-center gap-8">
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Shield size={24} className="text-green-500" />
-                <span className="text-sm">SSL Secure</span>
+              <div className="flex items-center space-x-3 text-gray-400 group">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500/20 to-green-600/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Shield size={24} className="text-green-500" />
+                </div>
+                <div>
+                  <span className="text-sm font-bold text-white block">SSL Secure</span>
+                  <span className="text-xs text-gray-500">256-bit Encryption</span>
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Shield size={24} className="text-blue-500" />
-                <span className="text-sm">Bank-Level Security</span>
+              <div className="flex items-center space-x-3 text-gray-400 group">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-600/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Shield size={24} className="text-blue-500" />
+                </div>
+                <div>
+                  <span className="text-sm font-bold text-white block">Bank-Level Security</span>
+                  <span className="text-xs text-gray-500">PCI Compliant</span>
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <CheckCircle size={24} className="text-green-500" />
-                <span className="text-sm">HTTPS Encrypted</span>
+              <div className="flex items-center space-x-3 text-gray-400 group">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-500/20 to-green-600/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <CheckCircle size={24} className="text-green-500" />
+                </div>
+                <div>
+                  <span className="text-sm font-bold text-white block">HTTPS Encrypted</span>
+                  <span className="text-xs text-gray-500">Verified & Secure</span>
+                </div>
               </div>
-              <div className="flex items-center space-x-2 text-gray-400">
-                <Lock size={24} className="text-anchor-teal" />
-                <span className="text-sm">Data Protected</span>
+              <div className="flex items-center space-x-3 text-gray-400 group">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500/20 to-teal-600/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Lock size={24} className="text-anchor-teal" />
+                </div>
+                <div>
+                  <span className="text-sm font-bold text-white block">Data Protected</span>
+                  <span className="text-xs text-gray-500">GDPR Compliant</span>
+                </div>
               </div>
             </div>
             <p className="text-center text-xs text-gray-500 mt-6">
-              Your information is protected by 256-bit SSL encryption
+              🔒 Your information is protected by industry-leading 256-bit SSL encryption
             </p>
           </div>
         </div>
