@@ -138,9 +138,17 @@ const Home = () => {
     <div className="bg-white">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=2000&auto=format&fit=crop" 
+            alt="Professional business meeting" 
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/90 to-teal-700/90"></div>
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(13, 148, 136, 0.3) 0%, transparent 50%)'
+          backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(13, 148, 136, 0.2) 0%, transparent 50%)'
         }}></div>
         
         <div className="section-container relative z-10">

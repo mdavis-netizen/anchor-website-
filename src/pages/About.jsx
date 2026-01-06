@@ -51,20 +51,33 @@ const About = () => {
       {/* Story Section */}
       <section className="py-20">
         <div className="section-container">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
               Our Story
             </h2>
-            <div className="prose prose-lg mx-auto text-gray-600">
-              <p className="text-lg leading-relaxed mb-6">
-                Anchor Funding was born from a simple observation: traditional business lending was broken. Small and medium-sized businesses faced lengthy approval processes, rigid requirements, and impersonal service. We knew there had to be a better way.
-              </p>
-              <p className="text-lg leading-relaxed mb-6">
-                Our founders, experienced finance professionals who had worked with hundreds of businesses, set out to create a funding company that put businesses first. One that combined the speed and flexibility of alternative lending with the trustworthiness and expertise of traditional banks.
-              </p>
-              <p className="text-lg leading-relaxed">
-                Today, Anchor Funding has helped thousands of businesses access over $500 million in funding. But more importantly, we've helped businesses expand, hire new employees, purchase equipment, manage cash flow, and achieve their dreams.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Image */}
+              <div className="order-2 lg:order-1">
+                <img 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop" 
+                  alt="Professional team meeting discussing business growth" 
+                  className="rounded-2xl shadow-2xl w-full h-auto"
+                />
+              </div>
+              {/* Text */}
+              <div className="order-1 lg:order-2">
+                <div className="prose prose-lg text-gray-600">
+                  <p className="text-lg leading-relaxed mb-6">
+                    Anchor Funding was born from a simple observation: traditional business lending was broken. Small and medium-sized businesses faced lengthy approval processes, rigid requirements, and impersonal service. We knew there had to be a better way.
+                  </p>
+                  <p className="text-lg leading-relaxed mb-6">
+                    Our founders, experienced finance professionals who had worked with hundreds of businesses, set out to create a funding company that put businesses first. One that combined the speed and flexibility of alternative lending with the trustworthiness and expertise of traditional banks.
+                  </p>
+                  <p className="text-lg leading-relaxed">
+                    Today, Anchor Funding has helped thousands of businesses access over $500 million in funding. But more importantly, we've helped businesses expand, hire new employees, purchase equipment, manage cash flow, and achieve their dreams.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
