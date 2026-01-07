@@ -115,6 +115,7 @@ const Home = () => {
       rating: 5,
       text: 'Anchor Funding helped us expand to a second location. The process was fast, transparent, and the team was incredibly supportive. We got approved in less than 24 hours!',
       amount: '$150K',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
     },
     {
       name: 'Michael Chen',
@@ -123,6 +124,7 @@ const Home = () => {
       rating: 5,
       text: 'As a growing tech company, we needed capital quickly. Anchor Funding delivered exactly what we needed with flexible terms that worked for our cash flow.',
       amount: '$250K',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop',
     },
     {
       name: 'David Rodriguez',
@@ -131,6 +133,7 @@ const Home = () => {
       rating: 5,
       text: 'The equipment financing option was perfect for our business. We purchased new machinery and saw immediate ROI. Highly recommend Anchor Funding!',
       amount: '$300K',
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop',
     },
   ]
 
@@ -337,6 +340,15 @@ const Home = () => {
             </p>
           </div>
 
+          {/* Professional Team Image */}
+          <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2400&auto=format&fit=crop" 
+              alt="Professional financial advisors working with clients" 
+              className="w-full h-96 object-cover"
+            />
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -441,9 +453,18 @@ const Home = () => {
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed italic">"{testimonial.text}"</p>
                 <div className="border-t border-gray-200 pt-4">
-                  <p className="font-bold text-gray-900 text-lg">{testimonial.name}</p>
-                  <p className="text-sm text-gray-600 font-medium">{testimonial.company}</p>
-                  <p className="text-sm text-gray-500">{testimonial.location}</p>
+                  <div className="flex items-center space-x-4 mb-3">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-16 h-16 rounded-full object-cover border-2 border-anchor-blue shadow-md"
+                    />
+                    <div>
+                      <p className="font-bold text-gray-900 text-lg">{testimonial.name}</p>
+                      <p className="text-sm text-gray-600 font-medium">{testimonial.company}</p>
+                      <p className="text-sm text-gray-500">{testimonial.location}</p>
+                    </div>
+                  </div>
                   <div className="mt-3">
                     <span className="inline-block bg-green-100 text-green-800 text-xs font-bold px-3 py-1.5 rounded-full">
                       Funded {testimonial.amount}

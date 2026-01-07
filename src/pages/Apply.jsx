@@ -142,9 +142,16 @@ const Apply = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-anchor-navy to-anchor-blue text-white py-12">
-        <div className="section-container">
+      {/* Hero Section with Background */}
+      <section className="relative bg-gradient-to-br from-anchor-navy to-anchor-blue text-white py-12 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2400&auto=format&fit=crop" 
+            alt="Confident business owner ready to grow" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Apply for Funding

@@ -100,9 +100,16 @@ const Services = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-anchor-navy to-anchor-blue text-white py-20">
-        <div className="section-container">
+      {/* Hero Section with Background Image */}
+      <section className="relative bg-gradient-to-br from-anchor-navy to-anchor-blue text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img 
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=2400&auto=format&fit=crop" 
+            alt="Professional business team planning growth strategy" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="section-container relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Funding Solutions for Every Business Need
@@ -240,6 +247,14 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
               Simple Requirements
             </h2>
+            {/* Professional Consultation Image */}
+            <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2000&auto=format&fit=crop" 
+                alt="Business consultant helping client with funding application" 
+                className="w-full h-80 object-cover"
+              />
+            </div>
             <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-4">

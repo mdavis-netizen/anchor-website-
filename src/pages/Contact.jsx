@@ -143,6 +143,21 @@ const Contact = () => {
                   We understand that timing is crucial for your business. Our team is committed to responding to all inquiries within 24 hours, typically much sooner.
                 </p>
               </div>
+
+              {/* Your Dedicated Consultant */}
+              <div className="mt-8 bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-6">
+                <h3 className="font-semibold text-gray-900 mb-4 text-center">Your Dedicated Funding Consultant</h3>
+                <div className="flex flex-col items-center">
+                  <img 
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop" 
+                    alt="Funding consultant ready to help"
+                    className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-white mb-4"
+                  />
+                  <p className="text-gray-700 text-sm text-center">
+                    Our expert team is ready to guide you through the funding process and answer any questions.
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Contact Form */}

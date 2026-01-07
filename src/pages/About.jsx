@@ -103,6 +103,59 @@ const About = () => {
         </div>
       </section>
 
+      {/* Leadership Team Section */}
+      <section className="py-20 bg-white">
+        <div className="section-container">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Our Leadership Team
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" 
+                  alt="David Martinez - CEO & Founder"
+                  className="w-48 h-48 rounded-full object-cover mx-auto shadow-xl border-4 border-anchor-blue"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">David Martinez</h3>
+              <p className="text-anchor-blue font-semibold mb-3">CEO & Founder</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                15+ years in commercial lending with a passion for helping businesses grow. Previously VP at Goldman Sachs.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop" 
+                  alt="Jennifer Chen - COO"
+                  className="w-48 h-48 rounded-full object-cover mx-auto shadow-xl border-4 border-anchor-teal"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Jennifer Chen</h3>
+              <p className="text-anchor-teal font-semibold mb-3">Chief Operating Officer</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Expert in operations and process optimization. Former Director of Operations at American Express Business Lending.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="mb-6">
+                <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop" 
+                  alt="Robert Thompson - Head of Lending"
+                  className="w-48 h-48 rounded-full object-cover mx-auto shadow-xl border-4 border-anchor-navy"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Robert Thompson</h3>
+              <p className="text-anchor-navy font-semibold mb-3">Head of Lending</p>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                20+ years structuring business loans. Specializes in SBA lending and alternative financing solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Timeline Section */}
       <section className="py-20 bg-white">
         <div className="section-container">
