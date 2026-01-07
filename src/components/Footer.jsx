@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Shield, CheckCircle, Lock } from 'lucide-react'
+import { Mail, Phone, MapPin, Shield, CheckCircle, Lock } from 'lucide-react'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -17,20 +17,9 @@ const Footer = () => {
                 className="h-12 w-auto transition-all duration-300 group-hover:scale-105 brightness-0 invert"
               />
             </Link>
-            <p className="text-sm text-gray-400 mb-6 leading-relaxed">
+            <p className="text-sm text-gray-400 leading-relaxed">
               Empowering businesses with flexible funding solutions to fuel growth and success since 2010.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-anchor-blue hover:to-anchor-teal flex items-center justify-center transition-all duration-300 hover:scale-110">
-                <Linkedin size={18} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-anchor-blue hover:to-anchor-teal flex items-center justify-center transition-all duration-300 hover:scale-110">
-                <Twitter size={18} />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-800 hover:bg-gradient-to-r hover:from-anchor-blue hover:to-anchor-teal flex items-center justify-center transition-all duration-300 hover:scale-110">
-                <Facebook size={18} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
