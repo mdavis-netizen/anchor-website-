@@ -255,7 +255,7 @@ const Home = () => {
                 <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-6 max-w-xs">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
-                      <CheckCircle className="text-white" size={24} />
+                      <CheckCircle2 className="text-white" size={24} />
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-gray-900">$500M+</div>
