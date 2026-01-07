@@ -80,7 +80,7 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
       details: 'david@anchorfundingusa.com',
-      subdetails: 'We reply within 24 hours',
+      subdetails: 'We reply within 2 hours during business hours',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
@@ -140,7 +140,7 @@ const Contact = () => {
               <div className="mt-8 p-6 bg-gray-50 rounded-xl">
                 <h3 className="font-semibold text-gray-900 mb-3">Quick Response</h3>
                 <p className="text-gray-600 text-sm">
-                  We understand that timing is crucial for your business. Our team is committed to responding to all inquiries within 24 hours, typically much sooner.
+                  We understand that timing is crucial for your business. Our team is committed to responding to all inquiries within 2 hours during business hours.
                 </p>
               </div>
 
@@ -297,7 +297,7 @@ const Contact = () => {
                         <div>
                           <h4 className="text-green-800 font-semibold">Message Sent Successfully!</h4>
                           <p className="text-green-700 text-sm mt-1">
-                            Thank you for contacting us. We'll get back to you within 24 hours.
+                            Thank you for contacting us. We'll get back to you within 2 hours during business hours.
                           </p>
                         </div>
                       </div>
@@ -341,7 +341,7 @@ const Contact = () => {
                   How long does the approval process take?
                 </h3>
                 <p className="text-gray-600">
-                  Most applications are reviewed within 24 hours. Once approved, funding can be deposited into your account within 1-3 business days.
+                  Applications submitted during business hours are reviewed within 2 hours. Once approved, funding is deposited into your account within 1 hour of signing the contract.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md">

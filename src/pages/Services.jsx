@@ -4,7 +4,7 @@ import { DollarSign, Landmark, Zap, CreditCard, Layers, Calendar, ArrowRight, Ch
 const Services = () => {
   const services = [
     {
-      icon: <Landmark className="w-12 h-12 text-anchor-teal" />,
+      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop',
       title: 'SBA Loans',
       description: 'Government-backed financing with the lowest rates and longest terms available.',
       features: [
@@ -17,12 +17,12 @@ const Services = () => {
       link: '/products/sba-loans',
     },
     {
-      icon: <Zap className="w-12 h-12 text-anchor-teal" />,
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop',
       title: 'Merchant Cash Advance',
       description: 'Fast, flexible funding that adjusts to your daily credit card sales.',
       features: [
         'Up to $500K in funding',
-        'Approval in 24 hours',
+        'Approval in 2 hours',
         'No fixed monthly payments',
         'Bad credit accepted',
       ],
@@ -30,7 +30,7 @@ const Services = () => {
       link: '/products/mca',
     },
     {
-      icon: <DollarSign className="w-12 h-12 text-anchor-teal" />,
+      image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=600&auto=format&fit=crop',
       title: 'Business Loans',
       description: 'Straightforward term loans with predictable payments for growth and operations.',
       features: [
@@ -43,7 +43,7 @@ const Services = () => {
       link: '/products/business-loans',
     },
     {
-      icon: <CreditCard className="w-12 h-12 text-anchor-teal" />,
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=600&auto=format&fit=crop',
       title: 'Line of Credit',
       description: 'Revolving credit up to $250K that you can draw from whenever needed.',
       features: [
@@ -56,7 +56,7 @@ const Services = () => {
       link: '/products/line-of-credit',
     },
     {
-      icon: <Layers className="w-12 h-12 text-anchor-teal" />,
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=600&auto=format&fit=crop',
       title: 'Loan Consolidation',
       description: 'Simplify multiple debts into one payment with lower rates and better terms.',
       features: [
@@ -69,7 +69,7 @@ const Services = () => {
       link: '/products/loan-consolidation',
     },
     {
-      icon: <Calendar className="w-12 h-12 text-anchor-teal" />,
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop',
       title: 'Term Loans',
       description: 'Fixed-rate financing with flexible terms for any business investment.',
       features: [
@@ -137,19 +137,27 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col"
               >
-                <div className={`bg-gradient-to-r ${service.color} p-8`}>
-                  <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    {service.icon}
+                {/* Image Header */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-80 group-hover:opacity-70 transition-opacity duration-300`}></div>
+                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-white text-sm opacity-90">{service.description}</p>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-blue-50">{service.description}</p>
                 </div>
-                <div className="p-8">
-                  <ul className="space-y-3 mb-6">
+                
+                {/* Features */}
+                <div className="p-8 flex-grow flex flex-col">
+                  <ul className="space-y-3 mb-6 flex-grow">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start space-x-3">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -335,7 +343,7 @@ const Services = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Apply now and receive a funding decision within 24 hours.
+            Apply now and receive a funding decision within 2 hours during business hours.
           </p>
           <Link to="/apply" className="btn-primary bg-white text-anchor-blue hover:bg-gray-100">
             Apply for Funding

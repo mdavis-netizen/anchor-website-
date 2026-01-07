@@ -6,7 +6,7 @@ const MCA = () => {
     'Funding from $5K to $500K',
     'No fixed monthly payments',
     'Repay as you earn revenue',
-    'Approval in 24 hours',
+    'Approval in 2 hours',
     'No collateral required',
     'Bad credit accepted',
   ]
@@ -24,7 +24,7 @@ const MCA = () => {
     {
       icon: <Zap className="w-8 h-8 text-anchor-teal" />,
       title: 'Fast Funding',
-      description: 'Get approved in 24 hours and funded within 2-3 business days',
+      description: 'Get approved in 2 hours during business hours and funded within 1 hour of signing',
     },
     {
       icon: <CreditCard className="w-8 h-8 text-anchor-teal" />,
@@ -80,7 +80,7 @@ const MCA = () => {
               <div className="bg-purple-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">24 Hours</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">2 Hours</h3>
               <p className="text-gray-600 text-sm">Approval Time</p>
             </div>
             <div className="text-center">
@@ -175,7 +175,7 @@ const MCA = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Apply & Get Approved</h3>
-                    <p className="text-gray-600">Submit your application with basic business and revenue information. Get approved within 24 hours.</p>
+                    <p className="text-gray-600">Submit your application with basic business and revenue information. Get approved within 2 hours during business hours.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

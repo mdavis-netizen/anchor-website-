@@ -157,7 +157,7 @@ const Apply = () => {
               Apply for Funding
             </h1>
             <p className="text-xl text-blue-100">
-              Complete your application in minutes and get approved within 24 hours
+              Complete your application in minutes and get approved within 2 hours during business hours
             </p>
           </div>
         </div>
@@ -885,7 +885,7 @@ const Apply = () => {
                       <div>
                         <h4 className="text-green-800 font-semibold">Application Submitted Successfully!</h4>
                         <p className="text-green-700 text-sm mt-1">
-                          Thank you for your application. Our team will review it and contact you within 24 hours.
+                          Thank you for your application. Our team will review it and contact you within 2 hours during business hours.
                         </p>
                       </div>
                     </div>
@@ -912,8 +912,8 @@ const Apply = () => {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-lg shadow-md p-6 text-center">
                 <Clock className="w-10 h-10 text-anchor-teal mx-auto mb-3" />
-                <h3 className="font-semibold text-gray-900 mb-2">24-Hour Response</h3>
-                <p className="text-sm text-gray-600">We review all applications within 24 hours</p>
+                <h3 className="font-semibold text-gray-900 mb-2">2-Hour Response</h3>
+                <p className="text-sm text-gray-600">Applications during business hours reviewed within 2 hours</p>
               </div>
               <div className="bg-white rounded-lg shadow-md p-6 text-center">
                 <CheckCircle className="w-10 h-10 text-anchor-teal mx-auto mb-3" />

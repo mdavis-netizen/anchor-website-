@@ -275,7 +275,7 @@ const LineOfCredit = () => {
                   How quickly can I access funds from my line of credit?
                 </h3>
                 <p className="text-gray-600">
-                  Once your line of credit is established, you can typically access funds within 24 hours through a simple request. Some lines offer same-day transfers or even instant access through a dedicated business card linked to your credit line.
+                  Once your line of credit is established, you can typically access funds within 1 hour of your request during business hours. Some lines offer same-day transfers or even instant access through a dedicated business card linked to your credit line.
                 </p>
               </div>
 

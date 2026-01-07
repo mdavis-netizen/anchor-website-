@@ -270,7 +270,7 @@ const TermLoans = () => {
                     <td className="px-6 py-4 font-medium text-gray-900">Approval Time</td>
                     <td className="px-6 py-4 text-center text-green-600">24-48 hours</td>
                     <td className="px-6 py-4 text-center text-gray-600">24-48 hours</td>
-                    <td className="px-6 py-4 text-center text-gray-600">24 hours</td>
+                    <td className="px-6 py-4 text-center text-gray-600">2 hours*</td>
                   </tr>
                 </tbody>
               </table>

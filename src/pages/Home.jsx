@@ -27,7 +27,7 @@ const Home = () => {
     {
       icon: <Clock className="w-8 h-8 text-anchor-teal" />,
       title: 'Fast Approval',
-      description: 'Get approved in as little as 24 hours with our streamlined application process.',
+      description: 'Get approved within 2 hours when received during business hours with our streamlined application process.',
     },
     {
       icon: <Shield className="w-8 h-8 text-anchor-teal" />,
@@ -50,47 +50,47 @@ const Home = () => {
     { value: '$500M+', label: 'Total Funded' },
     { value: '10,000+', label: 'Businesses Helped' },
     { value: '4.9/5', label: 'Client Rating' },
-    { value: '24hr', label: 'Fast Approval' },
+    { value: '2hrs', label: 'Fast Approval' },
   ]
 
   const services = [
     {
-      icon: <Landmark className="w-10 h-10 text-white" />,
+      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop',
       title: 'SBA Loans',
       description: 'Government-backed financing up to $5M with the lowest rates and longest terms.',
       color: 'from-blue-500 to-blue-600',
       link: '/products/sba-loans',
     },
     {
-      icon: <Zap className="w-10 h-10 text-white" />,
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=600&auto=format&fit=crop',
       title: 'Merchant Cash Advance',
       description: 'Fast funding up to $500K with flexible repayment based on your daily sales.',
       color: 'from-purple-500 to-purple-600',
       link: '/products/mca',
     },
     {
-      icon: <DollarSign className="w-10 h-10 text-white" />,
+      image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=600&auto=format&fit=crop',
       title: 'Business Loans',
       description: 'Traditional term loans from $10K to $500K with predictable monthly payments.',
       color: 'from-teal-500 to-teal-600',
       link: '/products/business-loans',
     },
     {
-      icon: <CreditCard className="w-10 h-10 text-white" />,
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=600&auto=format&fit=crop',
       title: 'Line of Credit',
       description: 'Revolving credit up to $250K - draw funds as needed and pay for what you use.',
       color: 'from-indigo-500 to-indigo-600',
       link: '/products/line-of-credit',
     },
     {
-      icon: <Layers className="w-10 h-10 text-white" />,
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=600&auto=format&fit=crop',
       title: 'Loan Consolidation',
       description: 'Simplify multiple debts into one payment with lower rates and better terms.',
       color: 'from-emerald-500 to-emerald-600',
       link: '/products/loan-consolidation',
     },
     {
-      icon: <Calendar className="w-10 h-10 text-white" />,
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop',
       title: 'Term Loans',
       description: 'Fixed-rate financing from $25K to $500K with flexible terms from 6-60 months.',
       color: 'from-cyan-500 to-cyan-600',
@@ -113,7 +113,7 @@ const Home = () => {
       company: 'Johnson\'s Retail Store',
       location: 'Austin, TX',
       rating: 5,
-      text: 'Anchor Funding helped us expand to a second location. The process was fast, transparent, and the team was incredibly supportive. We got approved in less than 24 hours!',
+      text: 'Anchor Funding helped us expand to a second location. The process was fast, transparent, and the team was incredibly supportive. We got approved in less than 2 hours!',
       amount: '$150K',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop',
     },
@@ -221,7 +221,7 @@ const Home = () => {
                 </div>
                 <div className="h-10 w-px bg-white/20"></div>
                 <div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">24hrs</div>
+                  <div className="text-3xl md:text-4xl font-bold text-white mb-1">2hrs</div>
                   <div className="text-xs text-gray-400 uppercase tracking-wide">Approval</div>
                 </div>
                 <div className="h-10 w-px bg-white/20"></div>
@@ -328,24 +328,32 @@ const Home = () => {
               >
                 <Link
                   to={service.link}
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group block"
+                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group block h-full flex flex-col"
                 >
-                <div className={`bg-gradient-to-r ${service.color} p-8 group-hover:scale-105 transition-transform duration-300`}>
-                  <div className="flex justify-center mb-4">
-                    {service.icon}
+                  {/* Image Section */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-80 group-hover:opacity-70 transition-opacity duration-300`}></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <h3 className="text-2xl font-bold text-white text-center px-4">
+                        {service.title}
+                      </h3>
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white text-center mb-3">
-                    {service.title}
-                  </h3>
-                </div>
-                <div className="p-6">
-                  <p className="text-gray-700 text-center mb-4">{service.description}</p>
-                  <div className="text-center">
-                    <span className="text-anchor-blue font-semibold group-hover:text-anchor-navy inline-flex items-center">
-                      Learn More <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
-                    </span>
+                  
+                  {/* Content Section */}
+                  <div className="p-6 flex-grow flex flex-col">
+                    <p className="text-gray-700 text-center mb-4 flex-grow">{service.description}</p>
+                    <div className="text-center">
+                      <span className="text-anchor-blue font-semibold group-hover:text-anchor-navy inline-flex items-center">
+                        Learn More <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                      </span>
+                    </div>
                   </div>
-                </div>
                 </Link>
               </motion.div>
             ))}
@@ -441,7 +449,7 @@ const Home = () => {
                   2
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Get Approved</h3>
-                <p className="text-gray-600">Receive approval within 24 hours from our expert funding specialists</p>
+                <p className="text-gray-600">Receive approval within 2 hours when submitted during business hours from our expert funding specialists</p>
               </div>
 
               <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
@@ -449,7 +457,7 @@ const Home = () => {
                   3
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Receive Funds</h3>
-                <p className="text-gray-600">Get your funding deposited directly into your business account</p>
+                <p className="text-gray-600">Funding deposited within 1 hour of signing your contract directly into your business account</p>
               </div>
             </div>
           </div>
@@ -521,7 +529,7 @@ const Home = () => {
             Ready to Grow Your Business?
           </h2>
           <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto">
-            Get started today and see how Anchor Funding can help your business succeed. Apply now and receive a decision within 24 hours.
+            Get started today and see how Anchor Funding can help your business succeed. Apply now and receive a decision within 2 hours during business hours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/apply" className="btn-primary bg-white text-anchor-blue hover:bg-gray-100 text-lg px-10 py-4 shadow-xl">
