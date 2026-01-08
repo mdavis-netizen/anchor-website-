@@ -379,13 +379,39 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Professional Team Image */}
-          <div className="mb-16 rounded-2xl overflow-hidden shadow-2xl">
-            <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2400&auto=format&fit=crop" 
-              alt="Professional financial advisors working with clients" 
-              className="w-full h-96 object-cover"
-            />
+          {/* Professional Consultation Image - 2 People */}
+          <div className="mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                  Personal Attention, Professional Results
+                </h3>
+                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                  Every client works directly with a dedicated funding specialist who understands your business and is committed to finding the perfect financing solution for your needs.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <p className="text-gray-700">One-on-one consultation with funding experts</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <p className="text-gray-700">Customized funding strategies for your business</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                    <p className="text-gray-700">Transparent guidance through every step</p>
+                  </div>
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2000&auto=format&fit=crop" 
+                  alt="Business funding consultant in one-on-one consultation with client" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

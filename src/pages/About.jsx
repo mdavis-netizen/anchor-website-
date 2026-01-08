@@ -59,8 +59,8 @@ const About = () => {
               {/* Image */}
               <div className="order-2 lg:order-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2000&auto=format&fit=crop" 
-                  alt="Professional team meeting discussing business growth" 
+                  src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=2000&auto=format&fit=crop" 
+                  alt="Business funding consultant meeting with client to discuss financing options" 
                   className="rounded-2xl shadow-2xl w-full h-auto"
                 />
               </div>
